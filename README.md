@@ -1,3 +1,3 @@
 # projetoAcademiaEmCasa
 
-veja o site aqui : https://shaullin.github.io/projetoAcademiaEmCasa/
+veja o site aqui :

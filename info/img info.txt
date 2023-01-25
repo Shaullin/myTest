@@ -1,0 +1,12 @@
+Quando eu for trabalahr uam imagem de fundo é no css
+<background-img >
+
+quando a imagem for para trabalhar por cima é <img url > no HTML
+
+margin top, bottom , left e right é pra criar margem aos lados de algo, e ele empurra as coisas ao seu redor
+
+right , bottom, top, left é para mover um elemento dentro do html
+
+width é a largura 
+height é a altura
+

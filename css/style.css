@@ -1,0 +1,463 @@
+:root {
+
+    --primary: #101417;
+    --contrast: #B91F33;
+    --gray-light: #E1E1E1;
+    --white: #FFFFFF;
+    --preto: #222222;
+    --cinza: #666666;
+    --yeallow: #E0E34C;
+    --mediumblack: #000000;
+}
+
+body {
+
+    font-family: 'teko', sans-serif;
+    margin: 0;
+    background-color: var(--primary);
+    text-transform: uppercase;
+}
+
+img {
+
+    /*retirando das imagens o padrao texto*/
+    display: block;
+    /* todas as imagens sao tratadas como texto, e possuem um espaço em baixo, sao tratadas
+     em linha, entao para matar esse espaço trasnformamos elas em elementos em BLOCO*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    margin: 0;
+}
+
+h2 {
+
+
+    text-decoration: none;
+    font-family: 'teko';
+    font-size: 40px;
+    color: var(--white);
+
+}
+
+h3 {
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--white);
+
+}
+
+h4 {
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+p {
+
+
+    font-family: 'teko';
+    color: var(--gray-light);
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    
+    text-transform: uppercase;
+
+}
+
+ul li {
+
+    color: var(--gray-light);
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+
+    text-align: left;
+    text-transform: uppercase;
+
+}
+
+
+
+
+.header {
+    /* trabalhamos com "%" para todos os tamanhos de monitores e "px" para algo especifico de tamanho*/
+    width: 100%;
+    /*altura*/
+    height: auto;
+    /*largura*/
+    background-color: rgba(0, 0, 0, 0.5);
+    /* padding-top: 16px
+        padding-bottom: 16px 
+        é a mesma coisa que padding : 16px 0;*/
+
+    padding: 16px 0;
+    position: fixed;
+    /* fica fixo na tela pertece ao body elemento pai por ser fixed*/
+    z-index: 1;
+    /* é uma propriedade do Position e serve para ordenar quem fica atras ou a frente de quem*/
+    /* ele deixa items sobrepostos por cima ou por baixo faz parte do position tem que ter*/
+    top: 0;
+
+}
+
+.container {
+
+    width: 1140px;
+    /*altura*/
+    margin: 0 auto;
+    /* vertical / horizontal  / centralizando o container*/
+
+}
+
+/* Formatando o container que está dentro do header */
+.header .container {
+
+    display: flex;
+    justify-content: space-between;
+    /* alinhando no eixo X*/
+    align-items: center;
+    /* alinhando no eixo Y*/
+
+}
+
+/* para saber quem é quem aplica uma cor para entender no que ta mexendo*/
+/* .menu a { } estou formatando todos os "a" do menu*/
+.menu a {
+
+
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 110px;
+
+}
+
+/* hover = ao passar o mouse nos links do menu troca de cor*/
+/* quando passar o mouse em cima troca de cor */
+.menu a:hover {
+
+    color: var(--contrast);
+
+}
+
+
+.hero-section {
+
+    width: 100%;
+    /*altura*/
+    height: 650px;
+    /*largura*/
+    background-image: url(../img/background.jpg);
+    /* quando a imagem fica no fundo e o texto por cima*/
+    background-size: cover;
+    /* nao deixa repetir a imagem  e cresce junto com tamanho da page, cobre toda a DIV*/
+    display: flex;
+    align-items: center;
+
+}
+
+.hero-section .container {
+
+    position: relative;
+    /* posição  em relação a ele mesmo */
+    top: 52px;
+    /* desceu 52px para ficar abaixo do titutlo*/
+
+}
+
+.hero-section h1 {
+
+    margin: 0;
+    max-width: 946px;
+    /*maxima altura*/
+    font-size: 96px;
+    color: var(--gray-light);
+    line-height: 90%;
+
+}
+
+.hero-section p {
+
+    font-size: 24px;
+    line-height: 120%;
+    /* linha de largura*/
+    color: var(--gray-light);
+    max-width: 655px;
+
+}
+
+.hero-section a {
+
+    font-family: 'teko';
+    background-color: var(--contrast);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 13px 44px 6px 44px;
+    /* top right bottom left, sempre sentido do relogio para lembrar*/
+    border-radius: 3px;
+    display: inline-block;
+    /* se tem uma caixinha tem q botar o display: inline-block*/
+
+}
+
+
+
+/* ou .nossa-academia pq ja tem no HTML <div class="container nossa-academia>"
+
+ficaria :
+
+.nossa-academia{
+
+}
+
+*/
+
+/*
+.nossa-academia .container{ 
+    display: flex;
+    align-items: center;
+}
+*/
+
+.nossa-academia {
+
+    /* aqui estamos aplicando flex box no container todo da div < container .nossa-academia >*/
+    /* são propriedades do flex box*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* posiciona as coisas no flex box*/
+    /* espaçao entre os itens */
+    column-gap: 24px;
+    /* espaço entre as colunas do flexbox*/
+    /* adiciona 24px entre os itens, espaço. */
+    /*--------------------------------------------------------------*/
+
+    margin-top: 100px;
+    /* desce a imagem 100px*, como se fosse criar um espaço em cima*/
+    margin-bottom: 100px;
+    /* sobe a imagem 100px, como se fosse criar um espaço em baixo*/
+    /* margin: 100px auto*/
+    /* o primeiro 100px é cima e baixo ( o auto é direita e esquerda )*/
+    /* margin trabalha a margem das div, se quer trabalhar um posicionamento de um elemento tem que usar
+     o position= relative que ai vc move o elemento dentro do container */
+}
+
+
+.faca-parte {
+
+    padding: 37px 0;
+    /* 37px cima e embaixo e 0 a esquerda e direita*/
+    background-color: var(--gray-light);
+
+
+}
+
+.faca-parte h2 {
+
+    color: var(--preto);
+}
+
+.faca-parte p {
+
+    max-width: 850px;
+    color: var(--cinza);
+    margin-bottom: 0;
+}
+
+.faca-parte .container {
+
+    /* virou elemento pai !!! antes sem o position relative nesse container o BODY era o elemento pai*/
+    /* Colocando position no container para ele servir de referencia para a imgagem do atleta*/
+    position: relative;
+    /*background-color: #B91F33;  para ver o tamanho do container joga uma cor dentro*/
+
+}
+
+.img-atleta {
+
+    /* posição em relação ao elemento pai ( desde que ele tenha position) caso contrario , o body sera usado 
+    como referencia */
+    position: absolute;
+    right: 0;
+    bottom: -37px;
+    /* valor do padding*/
+
+
+}
+
+
+.plano {
+
+    width: 100%;
+
+    height: 750px;
+
+    background-image: url(../img/planos.png);
+    background-size: cover;
+    border-color: var(--mediumblack);
+    opacity: 70%;
+}
+
+
+.texto-plano h2 {
+
+
+    position: relative;
+    top: 60px;
+    bottom: 100px;
+    right: 558px;
+    left: 558px;
+
+
+
+}
+
+.texto-plano p {
+
+    position: relative;
+    top: 117px;
+    bottom: 490px;
+    right: 210px;
+    left: 210px;
+
+    text-align: center;
+
+    
+}
+
+.card-plano {
+
+    position: relative;
+    width: 364px;
+    height: 400px;
+    top: 190px;
+    bottom: 60px;
+    right: 889px;
+    left: 113px;
+
+    text-align: center;
+    border: solid;
+    border-color: var(--gray-light);
+    box-sizing: border-box;
+    padding: 20px 0;
+
+
+}
+
+.card-plano a {
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    color: var(--white);
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 100px;
+    margin-bottom: 19px;
+}
+
+.newcolor {
+
+    color: var(--yeallow);
+}
+
+
+.card-plano-especial {
+
+
+    position: relative;
+    width: 364px;
+    height: 400px;
+    top: -215px;
+    bottom: 60px;
+    right: 501px;
+    left: 501px;
+    text-align: center;
+    border-color: var(--contrast);
+
+    border: solid;
+    color: var(--white);
+    box-sizing: border-box;
+    padding: 20px 0;
+
+
+}
+
+.card-plano-especial a {
+
+
+    color: var(--white);
+    padding: 10px 100px;
+    margin-bottom: 19px;
+    background-color: var(--contrast);
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+
+.card-plano2 {
+
+
+    position: relative;
+    width: 364px;
+    height: 400px;
+    top: -615px;
+    bottom: 60px;
+    left: 889px;
+    right: 113px;
+    text-align: center;
+
+    border: solid;
+    border-color: var(--gray-light);
+    box-sizing: border-box;
+    padding: 20px 0;
+
+
+}
+
+.card-plano2 a {
+
+    color: var(--white);
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 100px;
+    margin-bottom: 19px;
+
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+}

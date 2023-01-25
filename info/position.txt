@@ -1,0 +1,21 @@
+
+Position: RELATIVE;
+posição em relação ao proprio elemento.
+
+position ABSOLUTE;
+Posição em relaçao ao elemento pai ( desde que o elemento pai tenha position )
+caso contrario, o body será usado como referencia.
+
+exemplo : <div class=container>
+
+<div class=aluno>
+
+</div>
+</div>
+
+a div container é a div pai da div aluno. Entao a div container tem que ter position relative para poder
+chamar position ABSOLUTE na div aluno.
+
+Position: FIXED;
+Posição fixa em relação ao body. Fica preso na tela rolando com a pagina. como se fosse o chat da pagian da 
+Coti.
